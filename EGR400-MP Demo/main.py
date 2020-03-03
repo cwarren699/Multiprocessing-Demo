@@ -2,7 +2,7 @@ from multiprocessing import Process
 import multiprocessing
 import time
 
-def sum(start=0, end=1234567892):
+def sum(start=0, end=1234567896):
     sum = 0
     for i in range(start, end):
         sum += i
@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     start = time.time()
     ps = []
-    num = (int) (1234567892 / multiprocessing.cpu_count())
+    num = (int) (1234567896 / multiprocessing.cpu_count())
 
     for i in range(1, multiprocessing.cpu_count()):
         p = Process(target=sum, args=(num*(i-1), num*i))
